@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:background="#bbffbb"
+    tools:context="ru.com.bulat.navcomponent.BoxFragment">
+
+    <TextView
+        android:id="@+id/value_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:gravity="center"
+        android:text="This is box!"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/go_back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go Back"
+        android:textAllCaps="true" />
+
+    <Button
+        android:id="@+id/open_secret_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Open Secret"
+        android:textAllCaps="true" />
+
+    <Button
+        android:id="@+id/generated_number_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Generated Number"
+        android:textAllCaps="true" />
+
+</LinearLayout>
