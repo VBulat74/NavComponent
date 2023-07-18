@@ -20,11 +20,11 @@ class RootFragment : Fragment(R.layout.fragment_root) {
         binding = FragmentRootBinding.bind(view)
 
         binding.openGreenBoxButton.setOnClickListener {
-            openBox(Color.rgb(200,255,200))
+            openBox(Color.rgb(200,255,200), "Green")
         }
 
         binding.openYellowBoxButton.setOnClickListener {
-            openBox(Color.rgb(255,255,200))
+            openBox(Color.rgb(255,255,200), "Yellow")
         }
         parentFragmentManager.setFragmentResultListener(BoxFragment.REQUEST_CODE, viewLifecycleOwner) { _, data ->
             val number = data.getInt(BoxFragment.EXTRA_RANDOM_NUMBER)
@@ -32,10 +32,10 @@ class RootFragment : Fragment(R.layout.fragment_root) {
         }
     }
 
-    private fun openBox(color:Int){
+    private fun openBox(color:Int, colorName : String){
         findNavController().navigate(
             R.id.action_rootFragment_to_boxFragment,
-            bundleOf(BoxFragment.ARG_COLOR to color )
+            bundleOf(BoxFragment.ARG_COLOR to color, BoxFragment.ARG_COLOR_NAME to colorName )
         )
     }
 }
